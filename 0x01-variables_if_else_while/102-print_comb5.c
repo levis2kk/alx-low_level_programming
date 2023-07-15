@@ -26,7 +26,7 @@ int main(void)
 			{
 				putchar(a + '0');
 				putchar(b + '0');
-				putchar('\t');
+				putchar(' ');
 				putchar(c + '0');
 				putchar(d + '0');
 

@@ -1,46 +1,26 @@
 #include <stdio.h>
 
+/**
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-    putchar('0');
-    putchar(',');
-    putchar(' ');
+	int number;
 
-    putchar('1');
-    putchar(',');
-    putchar(' ');
+	for (number = 0; number <= 9; number++)
+	{
+		putchar(number + '0');
 
-    putchar('2');
-    putchar(',');
-    putchar(' ');
+		if (number != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
 
-    putchar('3');
-    putchar(',');
-    putchar(' ');
+	putchar('\n');
 
-    putchar('4');
-    putchar(',');
-    putchar(' ');
-
-    putchar('5');
-    putchar(',');
-    putchar(' ');
-
-    putchar('6');
-    putchar(',');
-    putchar(' ');
-
-    putchar('7');
-    putchar(',');
-    putchar(' ');
-
-    putchar('8');
-    putchar(',');
-    putchar(' ');
-
-    putchar('9');
-
-    putchar('\n');
-
-    return 0;
+	return (0);
 }

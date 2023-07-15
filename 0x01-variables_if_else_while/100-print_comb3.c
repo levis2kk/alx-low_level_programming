@@ -1,187 +1,35 @@
 #include <stdio.h>
 
+/**
+ * main - program that prints all possible different combinations of 2 digits
+ *
+ * Return: 0
+ */
 int main(void)
 {
-    putchar('0');
-    putchar('1');
-    putchar(',');
+	int c = 0;
+	int f_d;
+	int l_d;
 
-    putchar('0');
-    putchar('2');
-    putchar(',');
+	while (c <= 99)
+	{
+		f_d = (c / 10 + '0');
+		l_d = (c % 10 + '0');
 
-    putchar('0');
-    putchar('3');
-    putchar(',');
+		if (f_d < l_d)
+		{
+			putchar(f_d);
+			putchar(l_d);
 
-    putchar('0');
-    putchar('4');
-    putchar(',');
+			if (c != 89)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+		}
+		c++;
+	}
 
-    putchar('0');
-    putchar('5');
-    putchar(',');
-
-    putchar('0');
-    putchar('6');
-    putchar(',');
-
-    putchar('0');
-    putchar('7');
-    putchar(',');
-
-    putchar('0');
-    putchar('8');
-    putchar(',');
-
-    putchar('0');
-    putchar('9');
-    putchar(',');
-
-    putchar('1');
-    putchar('2');
-    putchar(',');
-
-    putchar('1');
-    putchar('3');
-    putchar(',');
-
-    putchar('1');
-    putchar('4');
-    putchar(',');
-
-    putchar('1');
-    putchar('5');
-    putchar(',');
-
-    putchar('1');
-    putchar('6');
-    putchar(',');
-
-    putchar('1');
-    putchar('7');
-    putchar(',');
-
-    putchar('1');
-    putchar('8');
-    putchar(',');
-
-    putchar('1');
-    putchar('9');
-    putchar(',');
-
-    putchar('2');
-    putchar('3');
-    putchar(',');
-
-    putchar('2');
-    putchar('4');
-    putchar(',');
-
-    putchar('2');
-    putchar('5');
-    putchar(',');
-
-    putchar('2');
-    putchar('6');
-    putchar(',');
-
-    putchar('2');
-    putchar('7');
-    putchar(',');
-
-    putchar('2');
-    putchar('8');
-    putchar(',');
-
-    putchar('2');
-    putchar('9');
-    putchar(',');
-
-    putchar('3');
-    putchar('4');
-    putchar(',');
-
-    putchar('3');
-    putchar('5');
-    putchar(',');
-
-    putchar('3');
-    putchar('6');
-    putchar(',');
-
-    putchar('3');
-    putchar('7');
-    putchar(',');
-
-    putchar('3');
-    putchar('8');
-    putchar(',');
-
-    putchar('3');
-    putchar('9');
-    putchar(',');
-
-    putchar('4');
-    putchar('5');
-    putchar(',');
-
-    putchar('4');
-    putchar('6');
-    putchar(',');
-
-    putchar('4');
-    putchar('7');
-    putchar(',');
-
-    putchar('4');
-    putchar('8');
-    putchar(',');
-
-    putchar('4');
-    putchar('9');
-    putchar(',');
-
-    putchar('5');
-    putchar('6');
-    putchar(',');
-
-    putchar('5');
-    putchar('7');
-    putchar(',');
-
-    putchar('5');
-    putchar('8');
-    putchar(',');
-
-    putchar('5');
-    putchar('9');
-    putchar(',');
-
-    putchar('6');
-    putchar('7');
-    putchar(',');
-
-    putchar('6');
-    putchar('8');
-    putchar(',');
-
-    putchar('6');
-    putchar('9');
-    putchar(',');
-
-    putchar('7');
-    putchar('8');
-    putchar(',');
-
-    putchar('7');
-    putchar('9');
-    putchar(',');
-
-    putchar('8');
-    putchar('9');
-
-    putchar('\n');
-
-    return 0;
+	putchar('\n');
+	return (0);
 }

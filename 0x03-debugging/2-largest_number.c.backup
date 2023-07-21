@@ -1,0 +1,24 @@
+#include "main.h"
+
+/**
+ * main - Entry point of the program
+ *
+ * This function takes three integers as input from the user,
+ * calls the largest_number function to find the largest among them,
+ * and prints the result.
+ *
+ * Return: Always 0 (Success)
+ */
+
+int main(void)
+{
+	int a, b, c, largest;
+
+	printf("Enter three integers: ");
+	scanf("%d%d%d", &a, &b, &c);
+
+	largest = largest_number(a, b, c);
+	printf("The largest number is: %d\n", largest);
+
+	return (0);
+}

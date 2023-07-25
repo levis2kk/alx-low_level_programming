@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <string.h> // Add this line to include <string.h> for strchr
+#include <string.h>
 
 // Function to generate a random character within a specific range
 char generateRandomChar(int min, int max)
@@ -12,13 +12,13 @@ char generateRandomChar(int min, int max)
 // Function to generate a random valid password
 void generateRandomPassword(int length)
 {
-    char password[length + 1]; // +1 for the null terminator
-    int lowercase_min = 97;    // ASCII value of 'a'
-    int lowercase_max = 122;   // ASCII value of 'z'
-    int uppercase_min = 65;    // ASCII value of 'A'
-    int uppercase_max = 90;    // ASCII value of 'Z'
-    int digit_min = 48;        // ASCII value of '0'
-    int digit_max = 57;        // ASCII value of '9'
+    char password[13]; // Fixed-size array for the password, 12 characters + 1 for the null terminator
+    int lowercase_min = 97;
+    int lowercase_max = 122;
+    int uppercase_min = 65;
+    int uppercase_max = 90;
+    int digit_min = 48;
+    int digit_max = 57;
 
     for (int i = 0; i < length; i++)
     {

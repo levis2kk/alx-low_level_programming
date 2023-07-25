@@ -3,13 +3,13 @@
 #include <time.h>
 #include <string.h>
 
-// Function to generate a random character within a specific range
+/* Function to generate a random character within a specific range */
 char generateRandomChar(int min, int max)
 {
     return (char)(rand() % (max - min + 1)) + min;
 }
 
-// Function to generate a random valid password
+/* Function to generate a random valid password */
 void generateRandomPassword(int length)
 {
     char password[13]; // Fixed-size array for the password, 12 characters + 1 for the null terminator
@@ -19,8 +19,9 @@ void generateRandomPassword(int length)
     int uppercase_max = 90;
     int digit_min = 48;
     int digit_max = 57;
+    int i; // Move the variable declaration here
 
-    for (int i = 0; i < length; i++)
+    for (i = 0; i < length; i++)
     {
         int category = rand() % 3; // 0: lowercase, 1: uppercase, 2: digit
 

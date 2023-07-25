@@ -12,18 +12,18 @@ char generateRandomChar(int min, int max)
 /* Function to generate a random valid password */
 void generateRandomPassword(int length)
 {
-    char password[13]; // Fixed-size array for the password, 12 characters + 1 for the null terminator
+    char password[13]; /* Fixed-size array for the password, 12 characters + 1 for the null terminator */
     int lowercase_min = 97;
     int lowercase_max = 122;
     int uppercase_min = 65;
     int uppercase_max = 90;
     int digit_min = 48;
     int digit_max = 57;
-    int i; // Move the variable declaration here
+    int i; /* Move the variable declaration here */
 
     for (i = 0; i < length; i++)
     {
-        int category = rand() % 3; // 0: lowercase, 1: uppercase, 2: digit
+        int category = rand() % 3; /* 0: lowercase, 1: uppercase, 2: digit */
 
         switch (category)
         {
@@ -39,9 +39,9 @@ void generateRandomPassword(int length)
         }
     }
 
-    password[length] = '\0'; // Null-terminate the password
+    password[length] = '\0'; /* Null-terminate the password */
 
-    // Check for null bytes in the password and regenerate if found
+    /* Check for null bytes in the password and regenerate if found */
     if (strchr(password, '\0') != NULL)
     {
         generateRandomPassword(length);
@@ -54,8 +54,8 @@ void generateRandomPassword(int length)
 
 int main(void)
 {
-    int password_length = 12; // You can change this to your desired password length
-    srand(time(NULL));        // Seed the random number generator with the current time
+    int password_length = 12; /* You can change this to your desired password length */
+    srand(time(NULL));        /* Seed the random number generator with the current time */
 
     generateRandomPassword(password_length);
 

@@ -1,28 +1,29 @@
 #include "main.h"
-
 /**
-  * leet - convert a/A, e/E, o/O, t/T and l/L by 4, 3, 0, 7 and 1 respectively.
-  * @s: pointer to the string.
-  * Return: pointer tothe string.
-  */
+ * leet - encodes a string into 1337
+ * @s: input string.
+ * Return: the pointer to dest.
+ */
+
 char *leet(char *s)
 {
-	int i;
+	int count = 0, i;
+	int low_letters[] = {97, 101, 111, 116, 108};
+	int upp_letters[] = {65, 69, 79, 84, 76};
+	int numbers[] = {52, 51, 48, 55, 49};
 
-	i = 0;
-	while (*(s + i) != '\0')
+	while (*(s + count) != '\0')
 	{
-		if (*(s + i) == 65 || *(s + i) == 97)
-			*(s + i) = 52;
-		else if (*(s + i) ==  69 || *(s + i) == 101)
-			*(s + i) = 51;
-		else if (*(s + i) == 79 || *(s + i) == 111)
-			*(s + i) = 48;
-		else if (*(s + i) == 84 || *(s + i) == 116)
-			*(s + i) = 55;
-		else if (*(s + i) == 76 || *(s + i) == 108)
-			*(s + i) = 49;
-		i++;
+		for (i = 0; i < 5; i++)
+		{
+			if (*(s + count) == low_letters[i] || *(s + count) == upp_letters[i])
+			{
+				*(s + count) = numbers[i];
+				break;
+			}
+		}
+		count++;
 	}
+
 	return (s);
 }
